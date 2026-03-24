@@ -6,3 +6,5 @@ function calcular () {
     total.innerHTML = `Total: $${precio.value}`;
     precio.value = "";
 }
+
+boton.addEventListener('click', calcular);
