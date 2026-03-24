@@ -5,7 +5,8 @@ const total = document.getElementById('total');
 function calcular () {
     const precioFloat = parseFloat(precio.value);
     const iva = 0.15;
-    total.innerHTML = `Total: $${precioFloat + (precioFloat * iva)}`;
+    const totalConIva = precioFloat + (precioFloat * iva); 
+    total.innerHTML = `Total: $${totalConIva.toFixed(2)}`;
     precio.value = "";
 }
 
