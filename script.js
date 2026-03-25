@@ -11,21 +11,24 @@ const bankFeeValue = 0.02;
 function calc () {
 
     const floatPrice = parseFloat(price.value);
-    const totalIVA = floatPrice *   IVA;
-    const totalISD = floatPrice * ISDValue;
-    const totalPrice =  floatPrice + totalIVA;
-    const totalTogglesOn = floatPrice + (totalIVA + totalISD);
-    const totalBank = totalPrice * bankFeeValue;
+    const priceIVA = floatPrice * IVA;
+    const priceISD = floatPrice * ISDValue;
+    const totalPrice =  floatPrice + priceIVA;
+    const priceBank = totalPrice * bankFeeValue;
+    const totalFInal = floatPrice + (priceIVA + priceISD);
+    
 
-
-    total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
-    price.value = "";
 
     if (ISDTax.checked) {
-        totalIVA
+        const totalISD= totalPrice + priceISD;
+        total.innerHTML = `Total: $${totalISD.toFixed(2)}`;
+    }else {
+        total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
     }
 
+    
 
 }
 
 button.addEventListener('click', calc);
+ISDTax.addEventListener('change', calc)
