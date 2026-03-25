@@ -11,6 +11,20 @@
         <input type="number" id="price" placeholder="price">
         <button id="button">Calculadora</button>
         <p id="total">Total: $0.00</p>
+        <div id="toggles-container">
+            <ul>
+                <li id="isdTax-toggle">
+                    <label for="isdTax">Incluir ISD (5%)</label>
+                    <input type="checkbox" id="isdTax">
+                    <p class="toggle-description">Salida de divisas · opcional</p>
+                </li>
+                <li id="bankFee-toggle">
+                    <label for="bankFee">Cargo bancario (~2%)</label>
+                    <input type="checkbox" id="bankFee">
+                    <p class="toggle-description">comisión transacción internacional</p>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
