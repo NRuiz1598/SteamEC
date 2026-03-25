@@ -6,8 +6,8 @@ const bankFee = document.getElementById('bankFee');
 
 function calc () {
     const iva = 0.15;
-    const isdTax = 0.05;
-    const bankFee = 0.02;
+    const isdValue = 0.05;
+    const bankFeeValue = 0.02;
 
 
     const floatPrice = parseFloat(price.value);
