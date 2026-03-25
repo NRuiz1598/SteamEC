@@ -9,7 +9,7 @@ function calc () {
     const isdTax = 0.05;
     const bankFee = 0.02;
 
-    
+
     const floatPrice = parseFloat(price.value);
     const totalIva = floatPrice + (floatPrice * iva); 
     total.innerHTML = `Total: $${totalIva.toFixed(2)}`;
@@ -18,4 +18,4 @@ function calc () {
 
 }
 
-boton.addEventListener('click', calc);
+button.addEventListener('click', calc);
