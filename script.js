@@ -14,20 +14,12 @@ function calc () {
     const priceIVA = floatPrice * IVA;
     const priceISD = floatPrice * ISDValue;
     const totalPrice =  floatPrice + priceIVA;
-    const priceBank = totalPrice * bankFeeValue;
-    const totalFInal = floatPrice + (priceIVA + priceISD);
+    const totalFinal = floatPrice + (priceIVA + priceISD);
+    let resultado = totalPrice;
     
+    if (ISDTax.checked) resultado += priceISD;
 
-
-    if (ISDTax.checked) {
-        const totalISD= totalPrice + priceISD;
-        total.innerHTML = `Total: $${totalISD.toFixed(2)}`;
-    }else {
-        total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
-    }
-
-    
-
+    total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
 }
 
 button.addEventListener('click', calc);
