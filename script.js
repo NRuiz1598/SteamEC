@@ -19,7 +19,7 @@ function calc () {
     
     if (ISDTax.checked) resultado += priceISD;
 
-    total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
+    total.innerHTML = `Total: $${resultado.toFixed(2)}`;
 }
 
 button.addEventListener('click', calc);
