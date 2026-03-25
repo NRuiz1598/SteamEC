@@ -1,13 +1,13 @@
-const precio = document.getElementById('precio');
-const boton = document.getElementById('boton');
+const price = document.getElementById('price');
+const button = document.getElementById('button');
 const total = document.getElementById('total');
 
-function calcular () {
-    const precioFloat = parseFloat(precio.value);
+function calc () {
+    const floatPrice = parseFloat(price.value);
     const iva = 0.15;
-    const totalConIva = precioFloat + (precioFloat * iva); 
-    total.innerHTML = `Total: $${totalConIva.toFixed(2)}`;
-    precio.value = "";
+    const totalIva = floatPrice + (floatPrice * iva); 
+    total.innerHTML = `Total: $${totalIva.toFixed(2)}`;
+    price.value = "";
 }
 
-boton.addEventListener('click', calcular);
+boton.addEventListener('click', calc);
