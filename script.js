@@ -8,6 +8,7 @@ const basePrice = document.getElementById('base-price');
 const valIVA = document.getElementById('valIVA');
 const valISD = document.getElementById('valISD');
 const valBankFee = document.getElementById('valBankFee');
+const totalVal = document.getElementById('totalVal')
 const IVA = 0.15;
 const ISDValue = 0.05;
 const bankFeeValue = 0.02;
@@ -26,7 +27,8 @@ function calc () {
     const priceBank = floatPrice * bankFeeValue
     if (bankFee.checked) resultado += priceBank
 
-    total.innerHTML = `Total: $${resultado.toFixed(2)}`;
+    totalVal.innerHTML = `$${resultado.toFixed(2)}`;
+
 }
 
 button.addEventListener('click', calc);
