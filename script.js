@@ -27,6 +27,10 @@ function calc () {
     const priceBank = floatPrice * bankFeeValue
     if (bankFee.checked) resultado += priceBank
 
+    basePrice.innerHTML = `$${floatPrice.toFixed(2)}`;
+    valIVA.innerHTML = `$${priceIVA.toFixed(2)}`;
+    valISD.innerHTML = `$${priceISD.toFixed(2)}`;
+    valBankFee.innerHTML = `$${priceBank.toFixed(2)}`;
     totalVal.innerHTML = `$${resultado.toFixed(2)}`;
 
 }
