@@ -10,7 +10,7 @@
     <div id = "calculadora">
         <input type="number" id="price" placeholder="price">
         <button id="button">Calculadora</button>
-        <p id="total">Total: $0.00</p>
+
         <div id="toggles-container">
             <ul>
                 <li id="isdTax-toggle">
@@ -24,6 +24,37 @@
                     <p class="toggle-description">comisión transacción internacional</p>
                 </li>
             </ul>
+        </div>
+
+        <div id="veredict">
+            <div class="results" id="results-container">
+                <div class="result-row">
+                    <span class="result-label">Sin oferta (con impuestos)</span>
+                    <span class="result-value" id="price-noTax"></span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Precio base</span>
+                    <span class="result-value" id="base-price"></span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">IVA (15%)</span>
+                    <span class="result-value" id="valIVA"></span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">ISD (5%)</span>
+                    <span class="result-value" id="valISD"></span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Banco (~2%)</span>
+                    <span class="result-value" id="valBankFee"></span>
+                </div>
+                <hr>
+                <div class="result-row">
+                    <span class="result-label" id="total">Total: $0.00</span>
+                    <span class="result-value" id="TotalVal"></span>
+                </div>
+             
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
